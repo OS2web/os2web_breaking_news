@@ -1,13 +1,15 @@
-$j(document).ready(function($){
-  var breakingnews = $('.view-id-aktuelt.view-display-id-panel_pane_6');
 
-  breakingnews.marquee('view-id-aktuelt view-display-id-panel_pane_6').mouseover(function () {
-    $(this).trigger('stop');
-  }).mouseout(function () {
-    $(this).trigger('start');
-  });
+(function ($) {
+    $(document).ready(function($){
+        var breakingnews = $('.view-id-aktuelt.view-display-id-panel_pane_6');
 
-});
+        breakingnews.marquee('view-id-aktuelt view-display-id-panel_pane_6').mouseover(function () {
+            $(this).trigger('stop');
+        }).mouseout(function () {
+            $(this).trigger('start');
+        });
+    });
+})(jQuery);
 
 (function ($) {
     $.fn.marquee = function (klass) {
@@ -159,5 +161,5 @@ $j(document).ready(function($){
         return $(newMarquee);
     };
 
-}($j));
+}(jQuery));
 
